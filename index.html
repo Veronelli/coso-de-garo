@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="" class="btn-info">
+        <p>About</p>
+    </a>
+
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+
+        background: #333333;
+
+    }
+    .btn-info{
+        position: relative;
+        display: table;
+        margin: 10rem auto;
+        padding: 4px 0px;
+        text-decoration: none;
+    }
+    .btn-info>p{
+        color: #cccccc;
+        font-size: 30px;
+        letter-spacing: 7px;
+        transition: .3s ease-out;
+    }
+    .btn-info>p:after{
+
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0px;
+        height: 5px;
+        background: #cccccc;
+        transition: .3s ease-out;
+
+    }
+    .btn-info:hover>p{
+
+        text-shadow: 0px 0px 10px #cccccc5e;
+        animation: change-color-p 5s infinite;
+    }
+    .btn-info:hover>p::after{
+
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        box-shadow: 0px 0px 10px #cccccc5e;
+        animation: change-color-after 5s infinite;
+    }
+
+    @keyframes change-color-p{
+
+        0%,100%{
+
+            color: rgb(255, 142, 142);
+            text-shadow: 0px 0px 5px rgb(255, 142, 142);
+
+        }
+        25%{
+
+            color: rgb(142, 168, 255);
+            text-shadow: 0px 0px 5px  rgb(142, 168, 255);
+        }
+        50%{
+
+            color: rgb(246, 142, 255);
+            text-shadow: 0px 0px 5px rgb(246, 142, 255);
+        }
+        75%{
+
+            color: rgb(155, 255, 142);
+            text-shadow: 0px 0px 5px rgb(155, 255, 142);
+        }
+
+    }
+
+    @keyframes change-color-after{
+
+        0%,100%{
+
+            background: rgb(255, 142, 142);
+            box-shadow: 0px 0px 5px rgb(255, 142, 142);
+
+        }
+        25%{
+
+            background: rgb(142, 168, 255);
+            box-shadow: 0px 0px 5px  rgb(142, 168, 255);
+        }
+        50%{
+
+            background: rgb(246, 142, 255);
+            box-shadow: 0px 0px 5px rgb(246, 142, 255);
+        }
+        75%{
+
+            background: rgb(155, 255, 142);
+            box-shadow: 0px 0px 5px rgb(155, 255, 142);
+        }
+
+    }
+</style>
+</html>
